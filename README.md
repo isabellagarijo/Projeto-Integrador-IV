@@ -192,7 +192,7 @@ Esse arquivo representa a configuração versionável do dashboard e pode ser ut
 
 Também é disponibilizada uma versão estática do dashboard em formato PDF para facilitar sua visualização sem necessidade de acesso ao ambiente Databricks:
 
-**[Visualizar dashboard em PDF](documentacao/Dashboard_Analise_Exames_Citopatologicos.pdf)**
+**[Visualizar dashboard em PDF](documentacao/Analise_Exames_Citopatologicos.pdf)**
 
 > A versão em PDF é estática e, portanto, não possui a interatividade dos filtros disponíveis no dashboard original do Databricks.
 
