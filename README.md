@@ -164,15 +164,19 @@ Foi desenvolvido um dashboard no Databricks AI/BI contendo:
 
 ### Visão geral
 
-![Visão geral do dashboard](imagens/dashboard_visao_geral.png)
+!<img width="944" height="340" alt="image" src="https://github.com/user-attachments/assets/b2af3041-868b-44ff-978e-118420a0a1fa" />
+
 
 ### Avaliação do modelo
 
-![Avaliação do modelo](imagens/dashboard_avaliacao.png)
+!<img width="944" height="340" alt="image" src="https://github.com/user-attachments/assets/5b26ebd6-eee0-496a-95ed-4e3496df390f" />
+
 
 ### Realizado x Previsto
 
-![Realizado x Previsto](imagens/dashboard_real_previsto.png)
+!<img width="944" height="427" alt="image" src="https://github.com/user-attachments/assets/88a8a2e9-4614-4c49-b5f9-30abc1fc38f0" />
+
+
 
 > O arquivo de configuração do dashboard também está disponível neste repositório em formato `.lvdash.json`.
 
