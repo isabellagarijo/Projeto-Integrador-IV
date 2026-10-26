@@ -212,11 +212,6 @@ Projeto-Integrador-IV/
 │   ├── 07_avaliacao_modelos
 │   └── 08_previsoes
 │
-├── imagens/
-│   ├── 01_visao_geral_dashboard.png
-│   ├── 02_resultados_avaliacao.png
-│   └── 03_realizado_previsto.png
-│
 ├── documentacao/
 │   └── Dashboard_Analise_Exames_Citopatologicos.pdf
 │
