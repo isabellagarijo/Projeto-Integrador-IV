@@ -227,8 +227,6 @@ Projeto-Integrador-IV/
 
 A pasta **Scripts** contém os notebooks utilizados nas diferentes etapas do projeto.
 
-A pasta **imagens** contém as capturas utilizadas para apresentar os principais resultados do dashboard diretamente no README.
-
 A pasta **documentacao** contém uma versão estática em PDF do dashboard.
 
 O arquivo **`.lvdash.json`** corresponde à configuração versionada do dashboard desenvolvido no Databricks AI/BI.
