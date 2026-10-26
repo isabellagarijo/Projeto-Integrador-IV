@@ -33,7 +33,7 @@ Para a etapa de Machine Learning, foram selecionados **412 municípios elegívei
 
 ## Arquitetura dos dados
 
-O projeto foi estruturado utilizando uma arquitetura em camadas:
+O projeto foi estruturado utilizando uma arquitetura em camadas.
 
 ### Bronze
 
@@ -78,7 +78,7 @@ Realiza a leitura da base original e o armazenamento dos dados brutos.
 
 ### 02 — Tratamento Silver
 
-Executa limpeza, padronização e preparação dos dados.
+Executa a limpeza, padronização e preparação dos dados.
 
 ### 03 — Indicadores Gold
 
@@ -124,7 +124,7 @@ Após a seleção do modelo, o histórico disponível até 2025 foi utilizado pa
 
 ## Resultados do Machine Learning
 
-Entre os algoritmos de Machine Learning avaliados, a **Regressão Linear** apresentou o melhor desempenho.
+Entre os algoritmos de Machine Learning avaliados, a **Regressão Linear** apresentou o melhor desempenho entre os modelos de Machine Learning testados.
 
 No teste final de 2025:
 
@@ -133,23 +133,23 @@ No teste final de 2025:
 | Regressão Linear - ML | 2.054,35 | 3.894,15 | 0,9921 |
 | Baseline - Ano anterior | 1.748,29 | 3.339,20 | 0,9942 |
 
-Embora a Regressão Linear tenha apresentado elevado ajuste aos dados, o baseline baseado no valor do ano anterior apresentou desempenho superior no conjunto de teste.
+Embora a Regressão Linear tenha apresentado elevado ajuste aos dados, o **baseline baseado no valor do ano anterior apresentou desempenho superior no conjunto de teste**, com menores valores de MAE e RMSE e R² ligeiramente superior.
 
-Esse resultado evidencia uma forte **persistência temporal** nos dados analisados.
+Esse resultado evidencia uma forte **persistência temporal** nos dados analisados e demonstra a importância de comparar modelos de Machine Learning com métodos de referência mais simples.
 
 ## Previsão para 2026
 
 Para os **412 municípios modelados**:
 
-- Total observado em 2025: aproximadamente **6,89 milhões**
-- Previsão do modelo para 2026: aproximadamente **7,19 milhões**
-- Variação agregada prevista: **+4,34%**
+- **Total observado em 2025:** aproximadamente 6,89 milhões;
+- **Previsão do modelo para 2026:** aproximadamente 7,19 milhões;
+- **Variação agregada prevista:** +4,34%.
 
 A previsão de 2026 deve ser interpretada como uma **estimativa experimental produzida pelo modelo**, e não como um valor observado.
 
 ## Dashboard interativo
 
-Foi desenvolvido um dashboard no Databricks AI/BI contendo:
+Foi desenvolvido um dashboard utilizando o **Databricks AI/BI**, contendo:
 
 - indicadores principais;
 - evolução histórica de 2016 a 2025;
@@ -164,28 +164,44 @@ Foi desenvolvido um dashboard no Databricks AI/BI contendo:
 
 ### Visão geral
 
-<img width="944" height="340" alt="image" src="https://github.com/user-attachments/assets/b2af3041-868b-44ff-978e-118420a0a1fa" />
+A visão geral apresenta os principais indicadores da solução, incluindo o total observado em 2025, a previsão para 2026, a variação prevista, o número de municípios modelados, a evolução histórica e a distribuição das previsões por Unidade Federativa.
+
+<img width="944" height="340" alt="image" src="https://github.com/user-attachments/assets/38c09191-b8ef-4f94-a8e6-6fcc6941791f" />
 
 
-### Avaliação do modelo
+### Resultados e avaliação do modelo
 
-<img width="944" height="455" alt="image" src="https://github.com/user-attachments/assets/42169f14-4845-4994-81f6-806ed1f2d88e" />
+Esta visualização apresenta os municípios com maiores valores previstos para 2026, a comparação entre valores realizados e previstos em 2025, as métricas de desempenho do modelo e os municípios com maiores erros absolutos.
 
-
-### Realizado x Previsto
-
-<img width="944" height="427" alt="image" src="https://github.com/user-attachments/assets/88a8a2e9-4614-4c49-b5f9-30abc1fc38f0" />
+<img width="944" height="455" alt="image" src="https://github.com/user-attachments/assets/198ab408-9e10-4ecb-96c2-c5c6fd3acb40" />
 
 
+### Análise Realizado x Previsto
 
-> O arquivo de configuração do dashboard também está disponível neste repositório em formato `.lvdash.json`.
+O gráfico de dispersão permite analisar a relação entre os valores observados e previstos pelo modelo em 2025, com identificação das regiões brasileiras.
+
+<img width="944" height="427" alt="image" src="https://github.com/user-attachments/assets/5824f023-e602-4eec-a1f8-0620ce8b9f32" />
+
+
+
+## Arquivos do dashboard
+
+O dashboard foi desenvolvido no **Databricks AI/BI** e seu arquivo de configuração está disponível neste repositório em formato **`.lvdash.json`**.
+
+Esse arquivo representa a configuração versionável do dashboard e pode ser utilizado para importação em um ambiente Databricks compatível.
+
+Também é disponibilizada uma versão estática do dashboard em formato PDF para facilitar sua visualização sem necessidade de acesso ao ambiente Databricks:
+
+**[Visualizar dashboard em PDF](documentacao/Dashboard_Analise_Exames_Citopatologicos.pdf)**
+
+> A versão em PDF é estática e, portanto, não possui a interatividade dos filtros disponíveis no dashboard original do Databricks.
 
 ## Estrutura do repositório
 
 ```text
-projeto-integrador/
+Projeto-Integrador-IV/
 │
-├── notebooks/
+├── Scripts/
 │   ├── 00_configuracao_ambiente
 │   ├── 01_ingestao_bronze
 │   ├── 02_tratamento_silver
@@ -196,21 +212,35 @@ projeto-integrador/
 │   ├── 07_avaliacao_modelos
 │   └── 08_previsoes
 │
-├── dashboard/
-│   └── Analise_de_Exames_Citopatologicos.lvdash.json
-│
 ├── imagens/
-│   ├── dashboard_visao_geral.png
-│   ├── dashboard_avaliacao.png
-│   └── dashboard_real_previsto.png
+│   ├── 01_visao_geral_dashboard.png
+│   ├── 02_resultados_avaliacao.png
+│   └── 03_realizado_previsto.png
+│
+├── documentacao/
+│   └── Dashboard_Analise_Exames_Citopatologicos.pdf
+│
+├── Análise de Exames Citopatológicos - PI IV.lvdash.json
 │
 └── README.md
 ```
 
-## Considerações
+A pasta **Scripts** contém os notebooks utilizados nas diferentes etapas do projeto.
 
-Os resultados indicam que técnicas de Machine Learning conseguem representar com elevado ajuste o comportamento histórico dos indicadores analisados. Entretanto, a comparação com um baseline simples mostrou que o valor do ano anterior possui grande capacidade preditiva.
+A pasta **imagens** contém as capturas utilizadas para apresentar os principais resultados do dashboard diretamente no README.
 
-O projeto demonstra, portanto, não apenas a aplicação de Machine Learning, mas também a importância de comparar modelos mais complexos com métodos de referência simples.
+A pasta **documentacao** contém uma versão estática em PDF do dashboard.
+
+O arquivo **`.lvdash.json`** corresponde à configuração versionada do dashboard desenvolvido no Databricks AI/BI.
+
+## Considerações finais
+
+Os resultados indicam que técnicas de Machine Learning conseguem representar com elevado ajuste o comportamento histórico dos indicadores analisados.
+
+Entretanto, a comparação com um baseline simples mostrou que o valor observado no ano anterior possui grande capacidade preditiva. No teste final de 2025, o baseline apresentou desempenho superior à Regressão Linear.
+
+O projeto demonstra, portanto, não apenas a aplicação de Machine Learning, mas também a importância de comparar modelos mais complexos com métodos de referência simples e avaliar criticamente seus resultados.
 
 As previsões apresentadas referem-se aos **412 municípios selecionados para a modelagem** e não devem ser interpretadas como uma previsão para todos os municípios brasileiros.
+
+A projeção para 2026 corresponde a uma **estimativa experimental**, construída a partir do histórico disponível até 2025.
