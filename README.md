@@ -169,7 +169,7 @@ Foi desenvolvido um dashboard no Databricks AI/BI contendo:
 
 ### Avaliação do modelo
 
-<img width="944" height="340" alt="image" src="https://github.com/user-attachments/assets/5b26ebd6-eee0-496a-95ed-4e3496df390f" />
+<img width="944" height="455" alt="image" src="https://github.com/user-attachments/assets/42169f14-4845-4994-81f6-806ed1f2d88e" />
 
 
 ### Realizado x Previsto
